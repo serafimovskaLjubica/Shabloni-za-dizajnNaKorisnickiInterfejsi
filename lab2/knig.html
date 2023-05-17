@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadaca3 Lab2</title>
+  <style>
+    body{padding: 0px; margin: 0px;}
+    #cover{
+      position:fixed;
+      padding:0;
+      margin:0;
+      top:0;
+      left:0;
+      z-index: 99;
+      width: 100vw;
+      height: 100vh;
+      background-color: grey;
+    }
+    #cover form{
+      color: white;
+      width: 300px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+    #preporacani{
+      background-color: aqua;
+      width: 60%;
+      min-height: 10px;
+    }
+  </style>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#cover").hide();
+      $("#addBook").click(function(){
+        $("#cover").show();
+      });
+      $("#add button").click(function(){
+        $("#preporacani").append($("#title").val() + " - " + $("author").val() + " - " + $("reason").val() + "<br/>");
+        $("#title").val("");$("#author").val("");$("#reason").val("");
+        $("#cover").hide();
+      });
+    });
+  </script>
+</head>
+<body>
+<h2>Preporacani</h2>
+<div id="cover"><form action="" id="add">
+  <label for="title">Title:</label><br/><input type="text" name="" id="title"><br/>
+  <label for="author">Author:</label><br/><input type="text" name="" id="author"><br/>
+  <label for="reason">Reason:</label><br/><input type="text" name="" id="reason"><br/>
+  <button>Add</button>
+</form></div>
+<div id="preporacani">
+
+</div>
+<button id="addBook">Add</button>
+</body>
+</html>
