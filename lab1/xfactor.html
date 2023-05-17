@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    p{
+      display: inline-block;
+    }
+    input#ime{
+      margin-right: 1200px;
+      padding-left: 20px;
+    }
+    input#umetnickoime{
+      margin-right: 1220px;
+    }
+    select#framework{
+      margin-right: 1300px;
+    }
+    form{
+      display: inline-block;
+      margin-right: 1350px;
+
+    }
+  </style>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+
+    const btn = document.querySelector('#btn');
+    const sb = document.querySelector('#framework')
+    btn.onclick = (event) => {
+      event.preventDefault();
+      // show the selected index
+      alert(sb.selectedIndex);
+    };
+
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Пријави се";
+    btn.addEventListener("click", function () {
+      alert("Button is clicked");
+    });
+    document.body.appendChild(btn);
+  </script>
+</head>
+<body>
+
+
+<h1>Форма за пријавување на Х-Factor</h1>
+<p>Име:</p>    <input type="text" id="ime" value=" ">
+<p>Уметничко име:</p>   <input type="text" id="umetnickoime" value=" ">
+<p>Пол:</p><form>
+  <input type="radio" name="choice" value="женски" id="prazno"><br>
+  <label for="prazno">Женски</label>
+  <input type="radio" name="choice" value="машки" id="choice-no">
+  <label for="choice-no">Машки</label>
+</form>
+<p>Жанр:</p><select id="framework">
+  <option value="0"></option>
+  <option value="1">Classical music</option>
+  <option value="2">Church choirs</option>
+  <option value="3">Jazz</option>
+  <option value="3">Pop</option>
+  <option value="4">Hip-hop, rap</option>
+</select>
+<button type="submit" name="formBtn">Пријави се</button>
+<p id="demo"></p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery-ui.js"></script>
+  <script src="jquery/jquery.js"></script>
+  <style>
+    .urlBold{
+      font-weight:bold;
+      color: #0000FF;
+    }
+    *{
+      color: #0000FF;
+    }
+  </style>
+<script>
+  function createInput(){
+    var $input = $('<input type="button" value="new button" />');
+    $input.appendTo($("body"));
+  }
+  $(document).ready(function (){
+    $("#button").click(function(){
+      $("ol>li").css("color","black");
+    });
+  });
+</script>
+
+</head>
+<body>
+<ul id="list">
+  <li>Logo-Photo</li>
+  <ol type="I">
+    <li>url - thumbnail: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-icon: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-default: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+  </ol>
+  <li>Header-Photo</li>
+  <ol type="I">
+    <li>url - thumbnail: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-icon: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-default: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+  </ol>
+  <li>Footer-Photo</li>
+  <ol type="I">
+    <li>url - thumbnail: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-icon: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-default: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+  </ol>
+  <li>Main-Photo</li>
+  <ol type="I">
+    <li>url - thumbnail: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>ur-icon: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+    <li>url-default: www.sth.com/GAVassdfSJFKBAFsadfdsg</li>
+  </ol>
+</ul>
+<button type="button" id="button">Change</button>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery-ui.js"></script>
+  <script src="jquery/jquery.js"></script>
+  <script>
+    $(document).ready(function (){
+      function getSize() {
+        size = $( "h1" ).css( "font-size" );
+        size = parseInt(size, 15);
+        $( "#font-size" ).text(  size  );
+      }
+      getSize();
+      $( "#zgolemi" ).on( "click", function() {
+
+        
+        if ((size + 2) <= 50) {
+          $( "h1" ).css( "font-size", "+=2" );
+          $( "#font-size" ).text(  size += 2 );
+        }
+      });
+
+      $( "#namali" ).on( "click", function() {
+        if ((size - 2) >= 12) {
+          $( "h1" ).css( "font-size", "-=2" );
+          $( "#font-size" ).text(  size -= 2  );
+        }
+      });
+
+      $( "#pocetna" ).on( "click", function(){
+        $( "#font-size" ).text(  size =14);
+      });
+    });
+
+  </script>
+  <style>
+    *{
+      font-size: 14px;
+    }
+    div:first-of-type{
+      background: #1c94c4;
+      height: 100px;
+      display: inline-block;
+      widows: 300;
+    }
+    button{
+      margin-top: 50px;
+    }
+  </style>
+
+
+</head>
+<body>
+
+<div>
+  <button type="button" id="pocetna">Почетна</button>
+  <button type="button" id="zgolemi">Зголеми</button>
+  <button type="button" id="namali">Намали</button>
+</div>
+
+<div>
+  <h1>How to connect the internet</h1>
+  <p>Once you've set up your computer, you may want to purchase home Internet access so you can send and receive email,
+    browse the Web, stream videos, and more.
+    You may even want to set up a home wireless network,
+    commonly known as Wi-Fi, so you can connect multiple devices to the Internet at the same time.</p>
+</div>
+</body>
+</html>
